@@ -14,7 +14,7 @@ const Login = () => {
                 <Nav />
                 <h1>Login Page</h1>
                 <button onClick={logGoogleUser}>
-                    Sign in with Google Popup
+                    Sign in with Google Popup.
                 </button>
             </main>
         </Fragment>
