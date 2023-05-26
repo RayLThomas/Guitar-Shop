@@ -1,17 +1,4 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
 .App-header {
   background-color: #282c34;
@@ -34,5 +21,182 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  background-color: rgb(247, 245, 245);
+}
+
+* {
+  color: rgb(19, 20, 19);
+}
+
+.nav-link {
+  padding-left: 0 !important;
+}
+
+h1 {
+  font-size: 5.5em;
+  letter-spacing: 0.05em;
+}
+
+ol {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: initial;
+}
+
+::selection {
+  background: #dbd93a;
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 100;
+    transform: translateY(0px);
+  }
+}
+
+/* -----------------------
+HOME
+--------------------------*/
+.nav a:hover {
+  transition: box-shadow 0.18s cubic-bezier(0.36, 0.65, 0.62, 1);
+  box-shadow: inset 0 -4px 0 #87f7ac;
+}
+
+.hero a {
+  text-decoration: none;
+  border-bottom: 2px solid #87f7ac;
+  box-shadow: inset 0 -4px 0 #87f7ac;
+  color: inherit;
+  transition: background 0.15s cubic-bezier(0.36, 0.65, 0.62, 1);
+}
+
+#heroBioLink,
+a,
+a > h2 {
+  color: rgb(79, 77, 209) !important;
+  border-bottom: none;
+  box-shadow: none;
+}
+
+#heroBioLink:hover,
+a:hover,
+a > h2:hover {
+  color: #87f7ac !important;
+  background: none;
+}
+
+.hero a:hover {
+  background: #87f7ac;
+  color: rgb(7, 2, 17) !important;
+}
+
+.hero p {
+  font-size: 1.5em;
+}
+
+main {
+  min-height: 78vh;
+}
+
+main > div > h2 {
+  letter-spacing: 0.05em;
+  font-weight: 100;
+}
+
+.card p,
+.card h5 {
+  color: rgb(7, 2, 17) !important;
+}
+
+.card > img:hover {
+  opacity: 90%;
+  transition-duration: .200s;
+  transition-timing-function: ease-in-out;
+}
+
+.footer a {
+  font-size: 1.5em;
+}
+
+.footer a #arrow {
+  position: relative;
+  left: 0;
+  opacity: 0;
+}
+
+.footer a:hover #arrow {
+  position: relative;
+  left: .35em;
+  opacity: 1;
+  transition-duration: 300ms;
+  transition-timing-function: ease-out;
+}
+
+.footerlinks > a {
+  color: rgb(79, 77, 209) !important;
+}
+
+
+
+/******************************
+MOBILE
+******************************/
+
+
+
+@media only screen and (max-width: 600px) {
+
+  .postEntry {
+    max-width: 85vw;
+  }
+
+  h1 {
+    font-size: 3em;
+  }
+
+  .gist {
+    max-width: 100vw;
+  }
+
+  .postEntry > p > img {
+    max-width: 80vw;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  ul.nav {
+    justify-content: center;
+  }
+
+}
+
+@media only screen and (max-width: 600px) {
+  footer > div > .footerInner {
+    justify-content: center !important;
   }
 }
