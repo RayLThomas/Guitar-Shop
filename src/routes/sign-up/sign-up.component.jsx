@@ -1,10 +1,12 @@
-import { Fragment } from "react"
+import { Fragment, useContext } from "react"
 import Nav from "../../components/Nav/Nav.component"
 import { useState } from "react";
 import { createAuthUserWithEmailAndPassword } from "../../utils/firebase/firebase.utils";
 import FormInput from '../../components/form-input/form-input.component'
 import ButtonCustom from "../../components/ButtonCustom/button-custom.component";
 import { createUserDocumentFromAuth } from "../../utils/firebase/firebase.utils";
+import { UserContext } from '../../contexts/user.context';
+import { useNavigate } from "react-router-dom";
 
 const  defaultFormFields = {
     displayName: '',
@@ -16,8 +18,12 @@ const  defaultFormFields = {
 const SignUp = () => {
     const [formFields, setFormFields] = useState(defaultFormFields);
     const { displayName, email, password, confirmPassword} = formFields
+    const { setCurrentUser } = useContext(UserContext);
+    const navigate = useNavigate();
 
-    console.log(formFields);
+    const resetFormFields = () => {
+        setFormFields(defaultFormFields);
+      };
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -29,7 +35,11 @@ const SignUp = () => {
 
         try {
             const { user } = await createAuthUserWithEmailAndPassword(email, password);
-            createUserDocumentFromAuth(user);
+            await createUserDocumentFromAuth(user,  { displayName: displayName });
+
+            setCurrentUser(user);
+            resetFormFields();
+            navigate('/');
         } catch (error) {
             console.log('There was an error', error.message);
         }
