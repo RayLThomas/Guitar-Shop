@@ -1,5 +1,5 @@
 import Nav from '../../components/Nav/Nav.component'
-import ProductCard from '../../components/ProductCard/product-card.component'
+import ProductCategoryCard from '../../components/ProductCategoryCard/product-category-card.component'
 import ButtonCustom from '../../components/ButtonCustom/button-custom.component';
 import BlurbDiscounts from '../../components/blurb-discounts/blurb-discounts.component'
 import '../../App.css';
@@ -21,12 +21,12 @@ function Home() {
 
         <div className="container text-center">
           <div className="row">
-            <ProductCard />
-            <ProductCard />
+            <ProductCategoryCard />
+            <ProductCategoryCard />
           </div>
           <div className="row">
-            <ProductCard />
-            <ProductCard />
+            <ProductCategoryCard />
+            <ProductCategoryCard />
           </div>
         </div>
 

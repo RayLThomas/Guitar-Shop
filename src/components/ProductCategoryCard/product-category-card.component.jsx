@@ -1,8 +1,6 @@
-import './product-card.scss';
+import './product-category-card.scss';
 
-
-
-const ProductCard = () => {
+const ProductCategoryCard = () => {
     const data = {
         imageLink: 'https://placehold.co/600x400'
     }
@@ -15,4 +13,4 @@ const ProductCard = () => {
     )
 }
 
-export default ProductCard;
+export default ProductCategoryCard;
