@@ -6,7 +6,7 @@ import '../../App.css';
 
 function Home() {
   return (
-    <div classNameName="App">
+    <div className="App">
       <Nav />
       <main className="container">
         <div className="hero fadeIn d-flex flex-column py-5">

@@ -5,9 +5,7 @@ import Electrics from './routes/electrics/electrics.components';
 import Locations from './routes/locations/locations.components';
 import Login from './routes/login/login.component';
 import SignUp from './routes/sign-up/sign-up.component';
-import { Fragment, useEffect, useState } from "react";
-import { db } from "./utils/firebase/firebase.utils";
-import { collection, getDocs, query, where } from "firebase/firestore";
+import { useState } from "react";
 
 import './App.css';
 
@@ -16,6 +14,7 @@ function App() {
 
   const [data, setData] = useState(null);
 
+  /*
   useEffect(() => {
     const fetchData = async () => {
         const guitars = collection(db, "Guitars");
@@ -26,6 +25,7 @@ function App() {
     };
     fetchData();
   }, []);
+  */
 
   console.log(data);
 

@@ -11,7 +11,7 @@ const Nav = () => {
     const { currentUser } = useContext(UserContext);
 
     return (
-        <nav class="container">
+        <nav className="container">
             <div className='row col-12 m-0 p-0'>
                 { currentUser ?
                     (
@@ -21,10 +21,10 @@ const Nav = () => {
                     )
                 }
             </div>
-            <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+            <header className="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
                 <img className="img-fluid" src="https://placehold.co/100x100" alt="logo" />
 
-                <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+                <ul className="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
                     <Link to="/">
                         <li className='px-2'>Home</li>
                     </Link>
@@ -41,13 +41,13 @@ const Nav = () => {
 
                 
                     {currentUser ? (
-                        <div class="col-md-3 col-lg-2 text-end">
-                            <button onClick={signOutUser} type="button" class="btn btn-outline-primary me-2">Sign out</button>
+                        <div className="col-md-3 col-lg-2 text-end">
+                            <button onClick={signOutUser} type="button" className="btn btn-outline-primary me-2">Sign out</button>
                         </div>
                     ) : (
-                        <div class="col-md-3 col-lg-2 text-end">
-                            <button onClick={() => navigate('/login')} type="button" class="btn btn-outline-primary me-2">Login</button>
-                            <button onClick={() => navigate('/sign-up')} type="button" class="btn btn-primary">Sign up</button>
+                        <div className="col-md-3 col-lg-2 text-end">
+                            <button onClick={() => navigate('/login')} type="button" className="btn btn-outline-primary me-2">Login</button>
+                            <button onClick={() => navigate('/sign-up')} type="button" className="btn btn-primary">Sign up</button>
                         </div>
                     )}
 
