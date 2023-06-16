@@ -3,6 +3,7 @@ import Home from './routes/home/home.component';
 import Acoustics from './routes/acoustics/acoustics.component';
 import Electrics from './routes/electrics/electrics.components';
 import Locations from './routes/locations/locations.components';
+import Checkout from './routes/checkout/checkout.component'
 import Login from './routes/login/login.component';
 import SignUp from './routes/sign-up/sign-up.component';
 import { useState } from "react";
@@ -35,6 +36,7 @@ function App() {
       <Route path='/acoustics' element={<Acoustics />}/>
       <Route path='/electrics' element={<Electrics />}/>
       <Route path='/locations' element={<Locations />}/>
+      <Route path='/checkout' element={<Checkout />} />
       <Route path='/login' element={<Login />}/>
       <Route path='/sign-up' element={<SignUp />}/>
     </Routes>
