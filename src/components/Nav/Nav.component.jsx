@@ -1,14 +1,18 @@
 import './Nav.component.scss';
 import '../ButtonCustom/button-custom.component';
-import { signOutUser } from '../../utils/firebase/firebase.utils'
+import CartIcon from '../cart-icon/cart-icon.component';
+import CartDropdown from '../cart-dropdown/cart-dropdown.component';
+import { signOutUser } from '../../utils/firebase/firebase.utils';
 import { Link, useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import { UserContext } from '../../contexts/user.context';
+import { CartContext } from '../../contexts/cart.context';
 
 
 const Nav = () => {
     const navigate = useNavigate();
     const { currentUser } = useContext(UserContext);
+    const { isCartOpen } = useContext(CartContext);
 
     return (
         <nav className="container">
@@ -41,17 +45,23 @@ const Nav = () => {
 
                 
                     {currentUser ? (
-                        <div className="col-md-3 col-lg-2 text-end">
+                        <div className="col-md-3 col-lg-3 d-flex text-end">
                             <button onClick={signOutUser} type="button" className="btn btn-outline-primary me-2">Sign out</button>
                         </div>
                     ) : (
-                        <div className="col-md-3 col-lg-2 text-end">
+                        <div className="col-md-3 col-lg-3 d-flex text-end">
                             <button onClick={() => navigate('/login')} type="button" className="btn btn-outline-primary me-2">Login</button>
                             <button onClick={() => navigate('/sign-up')} type="button" className="btn btn-primary">Sign up</button>
+                           {// build out the Cart Icon (117) 3:51 
+                            }
+                            <CartIcon />
+                            {/*build out cart dropdown*/}
+                            {/*isCartOpen && <CartDropdown />*/}
                         </div>
                     )}
-
             </header>
+            
+            <CartDropdown />
         </nav>
     )
 }
