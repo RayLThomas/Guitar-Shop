@@ -52,16 +52,11 @@ const Nav = () => {
                         <div className="col-md-3 col-lg-3 d-flex text-end">
                             <button onClick={() => navigate('/login')} type="button" className="btn btn-outline-primary me-2">Login</button>
                             <button onClick={() => navigate('/sign-up')} type="button" className="btn btn-primary">Sign up</button>
-                           {// build out the Cart Icon (117) 3:51 
-                            }
                             <CartIcon />
-                            {/*build out cart dropdown*/}
-                            {/*isCartOpen && <CartDropdown />*/}
                         </div>
                     )}
-            </header>
-            
-            <CartDropdown />
+            </header>            
+            {isCartOpen && <CartDropdown />}
         </nav>
     )
 }
