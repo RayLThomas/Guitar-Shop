@@ -25,33 +25,34 @@ const Nav = () => {
                     )
                 }
             </div>
-            <header className="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-                <a href='/'>
+            <header className="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom border-success">
+                <a className='logo-link' href='/'>
                     <img className="img-fluid logo" src={Logo} alt="logo" />
                 </a>
 
                 <ul className="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
                     <Link to="/">
-                        <li className='px-2'>Home</li>
+                        <li className='py-2 px-3 fs-5'>Home</li>
                     </Link>
                     <Link to="/acoustics">
-                        <li className='px-2'>Acoustic</li>
+                        <li className='py-2 px-3 fs-5'>Acoustic</li>
                     </Link>
                     <Link to="/electrics">
-                        <li className='px-2'>Electric</li>
+                        <li className='py-2 px-3 fs-5'>Electric</li>
                     </Link>
                     <Link to="/locations">
-                        <li className='px-2'>Locations</li>
+                        <li className='py-2 px-3 fs-5'>Locations</li>
                     </Link>
                 </ul>
 
                 
                     {currentUser ? (
-                        <div className="col-md-3 col-lg-3 d-flex justify-content-end">
+                        <div className="d-flex justify-content-end">
                             <button onClick={signOutUser} type="button" className="btn btn-outline-primary me-2">Sign out</button>
+                            <CartIcon />
                         </div>
                     ) : (
-                        <div className="col-md-3 col-lg-3 d-flex text-end">
+                        <div className="d-flex text-end justify-content-end">
                             <button onClick={() => navigate('/login')} type="button" className="btn btn-outline-primary me-2">Login</button>
                             <button onClick={() => navigate('/sign-up')} type="button" className="btn btn-primary">Sign up</button>
                             <CartIcon />

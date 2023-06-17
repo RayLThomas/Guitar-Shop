@@ -1,5 +1,8 @@
 nav {
-    
+    .logo-link {
+        width: 197px;
+    }
+
     .logo {
         height: 80px;
         width: 80px;
@@ -13,5 +16,14 @@ nav {
         li {
             list-style-type: none;
         }
+    }
+}
+
+@media (max-width: 576px) { 
+    .logo-link {
+        width: 80px;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 1em;
     }
 }

@@ -8,6 +8,7 @@ export const ProductProvider = ({ children }) => {
   const [data, setData] = useState(null);
   const [acousticGuitars, setAcousticGuitars] = useState([]);
   const [electricGuitars, setElectricGuitars] = useState([]);
+  const [featured, setFeatured] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -21,12 +22,15 @@ export const ProductProvider = ({ children }) => {
 
       const electrics = documents.filter((guitar) => guitar.type === "electric");
       setElectricGuitars(electrics);
+
+      const featured = documents.filter((guitar) => guitar.featured === true);
+      setFeatured(featured);
     };
     fetchData();
   }, []);
 
   return (
-    <ProductContext.Provider value={{ data, acousticGuitars, electricGuitars }}>
+    <ProductContext.Provider value={{ data, acousticGuitars, electricGuitars, featured }}>
       {children}
     </ProductContext.Provider>
   );

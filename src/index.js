@@ -20,6 +20,8 @@ root.render(
         <UserProvider>
           <CartProvider>
             <App />
+            
+        <div className="paperOverlay"></div>
           </CartProvider>
         </UserProvider>
       </ProductProvider>

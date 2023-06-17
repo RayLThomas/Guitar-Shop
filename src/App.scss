@@ -1,6 +1,11 @@
+html {
+  height: 0;
+}
 
 body {
   background-color: rgb(255 244 223);
+  position: relative;
+  min-height: 100vh;
 }
 
 * {
@@ -54,119 +59,31 @@ HOME
 --------------------------*/
 .nav a:hover {
   transition: box-shadow 0.18s cubic-bezier(0.36, 0.65, 0.62, 1);
-  box-shadow: inset 0 -4px 0 #87f7ac;
+  box-shadow: inset 0 -4px 0 #960303;
 }
 
 .hero a {
   text-decoration: none;
-  border-bottom: 2px solid #87f7ac;
-  box-shadow: inset 0 -4px 0 #87f7ac;
+  border-bottom: 3px solid #960303;
+  box-shadow: inset 0 -4px 0 #960303;
   color: inherit;
   transition: background 0.15s cubic-bezier(0.36, 0.65, 0.62, 1);
 }
 
-#heroBioLink,
-a,
-a > h2 {
-  color: rgb(79, 77, 209) !important;
-  border-bottom: none;
-  box-shadow: none;
-}
-
-#heroBioLink:hover,
-a:hover,
-a > h2:hover {
+a:hover{
   color: #87f7ac !important;
   background: none;
 }
 
-.hero a:hover {
-  background: #87f7ac;
-  color: rgb(7, 2, 17) !important;
-}
-
-.hero p {
-  font-size: 1.5em;
-}
-
-main {
-  min-height: 78vh;
-}
-
-main > div > h2 {
-  letter-spacing: 0.05em;
-  font-weight: 100;
-}
-
-.card p,
-.card h5 {
-  color: rgb(7, 2, 17) !important;
-}
-
-.card > img:hover {
-  opacity: 90%;
-  transition-duration: .200s;
-  transition-timing-function: ease-in-out;
-}
-
-.footer a {
-  font-size: 1.5em;
-}
-
-.footer a #arrow {
-  position: relative;
+.paperOverlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
   left: 0;
-  opacity: 0;
-}
-
-.footer a:hover #arrow {
-  position: relative;
-  left: .35em;
-  opacity: 1;
-  transition-duration: 300ms;
-  transition-timing-function: ease-out;
-}
-
-.footerlinks > a {
-  color: rgb(79, 77, 209) !important;
-}
-
-
-
-/******************************
-MOBILE
-******************************/
-
-
-
-@media only screen and (max-width: 600px) {
-
-  .postEntry {
-    max-width: 85vw;
-  }
-
-  h1 {
-    font-size: 3em;
-  }
-
-  .gist {
-    max-width: 100vw;
-  }
-
-  .postEntry > p > img {
-    max-width: 80vw;
-    display: block;
-    margin: 0 auto;
-  }
-  
-  ul.nav {
-    justify-content: center;
-  }
-
-}
-
-@media only screen and (max-width: 600px) {
-  footer > div > .footerInner {
-    justify-content: center !important;
-  }
+  right: 0;
+  background-repeat: repeat;
+  background-image: url("./assets//white-concrete-wall.jpg");
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  opacity: .4;
 }
