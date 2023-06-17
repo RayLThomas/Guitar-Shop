@@ -18,7 +18,6 @@ const Acoustics = () => {
     <Fragment>
       <Nav />
       <h1>Acoustics page</h1>
-      {console.log(acousticGuitars)}
       {acousticGuitars && acousticGuitars.map((doc, index) => (
         <ProductCard key={index} product={doc}/>
       ))}

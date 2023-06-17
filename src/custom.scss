@@ -1,0 +1,16 @@
+@import '~bootstrap/scss/functions';
+
+$primary: rgb(244, 122, 32); // Accent color
+$secondary: rgb(244, 174, 113); // Secondary Accent color
+$success: rgb(50, 50, 50); // Primary Text color
+$info: rgb(100, 100, 100); // Secondary Text color
+$light: rgb(255, 244, 223); // Primary Background color
+$dark: rgb(229, 217, 189); // Secondary Background color
+
+$body-bg: $light; // Body background color
+$body-color: $success; // Body text color
+
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+
+@import '~bootstrap/scss/bootstrap';

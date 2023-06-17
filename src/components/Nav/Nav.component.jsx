@@ -7,7 +7,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import { UserContext } from '../../contexts/user.context';
 import { CartContext } from '../../contexts/cart.context';
-
+import Logo from '../../assets/Logo.png';
 
 const Nav = () => {
     const navigate = useNavigate();
@@ -26,7 +26,9 @@ const Nav = () => {
                 }
             </div>
             <header className="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-                <img className="img-fluid" src="https://placehold.co/100x100" alt="logo" />
+                <a href='/'>
+                    <img className="img-fluid logo" src={Logo} alt="logo" />
+                </a>
 
                 <ul className="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
                     <Link to="/">
@@ -45,7 +47,7 @@ const Nav = () => {
 
                 
                     {currentUser ? (
-                        <div className="col-md-3 col-lg-3 d-flex text-end">
+                        <div className="col-md-3 col-lg-3 d-flex justify-content-end">
                             <button onClick={signOutUser} type="button" className="btn btn-outline-primary me-2">Sign out</button>
                         </div>
                     ) : (

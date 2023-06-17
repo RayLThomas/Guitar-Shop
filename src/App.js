@@ -6,16 +6,16 @@ import Locations from './routes/locations/locations.components';
 import Checkout from './routes/checkout/checkout.component'
 import Login from './routes/login/login.component';
 import SignUp from './routes/sign-up/sign-up.component';
-import { useState } from "react";
+//import { useState } from "react";
 
-import './App.css';
+import './App.scss';
 
 
 function App() {
-
+  /*
   const [data, setData] = useState(null);
 
-  /*
+
   useEffect(() => {
     const fetchData = async () => {
         const guitars = collection(db, "Guitars");
@@ -26,10 +26,10 @@ function App() {
     };
     fetchData();
   }, []);
-  */
+  
 
   console.log(data);
-
+*/
   return (
     <Routes>
       <Route path='/' element={<Home />}/>

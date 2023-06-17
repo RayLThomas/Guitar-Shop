@@ -2,7 +2,7 @@ import Nav from '../../components/Nav/Nav.component'
 import ProductCategoryCard from '../../components/ProductCategoryCard/product-category-card.component'
 import ButtonCustom from '../../components/ButtonCustom/button-custom.component';
 import BlurbDiscounts from '../../components/blurb-discounts/blurb-discounts.component'
-import '../../App.css';
+import '../../App.scss';
 
 function Home() {
   return (
