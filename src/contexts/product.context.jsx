@@ -6,6 +6,8 @@ export const ProductContext = createContext();
 
 export const ProductProvider = ({ children }) => {
   const [data, setData] = useState(null);
+  const [acousticGuitars, setAcousticGuitars] = useState([]);
+  const [electricGuitars, setElectricGuitars] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -13,11 +15,19 @@ export const ProductProvider = ({ children }) => {
       const querySnapshot = await getDocs(guitars);
       const documents = querySnapshot.docs.map((doc) => doc.data());
       setData(documents);
+
+      const acoustics = documents.filter((guitar) => guitar.type === "acoustic");
+      setAcousticGuitars(acoustics);
+
+      const electrics = documents.filter((guitar) => guitar.type === "electric");
+      setElectricGuitars(electrics);
     };
     fetchData();
   }, []);
 
   return (
-    <ProductContext.Provider value={data}>{children}</ProductContext.Provider>
+    <ProductContext.Provider value={{ data, acousticGuitars, electricGuitars }}>
+      {children}
+    </ProductContext.Provider>
   );
 };

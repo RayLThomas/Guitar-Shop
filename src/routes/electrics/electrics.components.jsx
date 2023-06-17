@@ -1,17 +1,9 @@
 import Nav from "../../components/Nav/Nav.component";
-import { Fragment, useContext, useEffect, useState } from "react";
+import { Fragment, useContext } from "react";
 import { ProductContext } from "../../contexts/product.context";
 
 const Electrics = () => {
-    const data = useContext(ProductContext);
-    const [electricGuitars, setElectricGuitars] = useState([]);
-
-    useEffect(() => {
-        if (data) {
-            const electricGuitars = data.filter((guitar) => guitar.type === "electric");
-            setElectricGuitars(electricGuitars);
-        }
-    }, [data]);
+  const { electricGuitars } = useContext(ProductContext);
 
     return (
         <Fragment>

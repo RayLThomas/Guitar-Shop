@@ -1,18 +1,12 @@
 import Nav from "../../components/Nav/Nav.component";
-import { Fragment, useContext, useState, useEffect } from "react";
+import { Fragment, useContext } from "react";
 import { ProductContext } from "../../contexts/product.context";
 import ProductCard from '../../components/product-card/product-card.component';
 import '../acoustics/acoustics.scss';
-const Acoustics = () => {
-  const data = useContext(ProductContext);
-  const [acousticGuitars, setAcousticGuitars] = useState([]);
 
-  useEffect(() => {
-    if (data) {
-      const acousticGuitars = data.filter((guitar) => guitar.type === "acoustic");
-      setAcousticGuitars(acousticGuitars);
-    }
-  }, [data]);
+const Acoustics = () => {
+  const { acousticGuitars } = useContext(ProductContext);
+
 
   return (
     <Fragment>
