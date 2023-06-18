@@ -22,7 +22,7 @@ const Nav = () => {
     }
 
     return (
-        <nav className="container">
+        <nav className="nav-container container-fluid sticky-top">
             <div className='row col-12 m-0 p-0'>
                 { currentUser ?
                     (
