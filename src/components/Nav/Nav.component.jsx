@@ -34,10 +34,10 @@ const Nav = () => {
                     <Link to="/">
                         <li className='py-2 px-3 fs-5'>Home</li>
                     </Link>
-                    <Link to="/acoustics">
+                    <Link to="/shop/acoustics">
                         <li className='py-2 px-3 fs-5'>Acoustic</li>
                     </Link>
-                    <Link to="/electrics">
+                    <Link to="/shop/electrics">
                         <li className='py-2 px-3 fs-5'>Electric</li>
                     </Link>
                     <Link to="/locations">

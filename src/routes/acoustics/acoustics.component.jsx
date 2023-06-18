@@ -1,20 +1,17 @@
 import Nav from "../../components/Nav/Nav.component";
-import { Fragment, useContext } from "react";
-import { ProductContext } from "../../contexts/product.context";
-import ProductCard from '../../components/product-card/product-card.component';
+import { Fragment } from "react";
 import '../acoustics/acoustics.scss';
+import ProductCategoryPage from '../../components/product-category-page/product-category-page.component'
 
 const Acoustics = () => {
-  const { acousticGuitars } = useContext(ProductContext);
+
 
 
   return (
     <Fragment>
       <Nav />
-      <h1>Acoustics page</h1>
-      {acousticGuitars && acousticGuitars.map((doc, index) => (
-        <ProductCard key={index} product={doc}/>
-      ))}
+      <h1 className="pb-3 text-center">Acoustic Guitars</h1>
+      <ProductCategoryPage category='acousticGuitars'/>
     </Fragment>
   );
 };

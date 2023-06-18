@@ -1,10 +1,10 @@
 .product-card-container {
-    width: 100%;
     display: flex;
     flex-direction: column;
     height: 350px;
     align-items: center;
     position: relative;
+    padding-bottom: 2em;
   
     img {
       width: 100%;
@@ -29,24 +29,20 @@
       button {
         opacity: 0.85;
         display: flex;
+        text-align: center;
       }
     }
   
     .footer {
+      position: relative;
+      top: -30px;
+      padding: 5px;
       width: 100%;
-      height: 5%;
+      height: 10%;
       display: flex;
       justify-content: space-between;
       font-size: 18px;
-  
-      .name {
-        width: 90%;
-        margin-bottom: 15px;
-      }
-  
-      .price {
-        width: 10%;
-      }
+      background-color: rgb(244, 174, 113);
     }
   }
   

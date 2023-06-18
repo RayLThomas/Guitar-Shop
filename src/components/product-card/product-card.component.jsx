@@ -10,13 +10,13 @@ const ProductCard = ({ product }) => {
     const addProductToCart = () => addItemToCart(product);
 
     return (
-        <div key={id} className='product-card-container'>
+        <div key={id} className='product-card-container col-sm-12 col-md-4'>
             <img src={image} alt={`${name}`}></img>
             <div className="footer">
                 <span className="name">{name}</span>
-                <span className="price">{price}</span>
+                <span className="price">${price}</span>
             </div>
-            <ButtonCustom className='btn-outline-primary' onClick={addProductToCart}>Add to cart</ButtonCustom>
+            <ButtonCustom className='btn-primary' onClick={addProductToCart}>Add to cart</ButtonCustom>
         </div>
     );
 }
