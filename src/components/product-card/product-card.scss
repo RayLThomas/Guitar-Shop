@@ -1,7 +1,7 @@
 .product-card-container {
     display: flex;
     flex-direction: column;
-    height: 350px;
+    height: 500px;
     align-items: center;
     position: relative;
     padding-bottom: 2em;
@@ -11,13 +11,16 @@
       height: 95%;
       object-fit: cover;
       margin-bottom: 5px;
+      border: 1px solid black;
+      border-bottom: none;
+      border-radius: 5px;
     }
   
     button {
       width: 80%;
       opacity: 0.7;
       position: absolute;
-      top: 255px;
+      top: 360px;
       display: none;
     }
   
@@ -38,9 +41,10 @@
       top: -30px;
       padding: 5px;
       width: 100%;
-      height: 10%;
+      min-height: 65px;
       display: flex;
       justify-content: space-between;
+      align-items: center;
       font-size: 18px;
       background-color: rgb(244, 174, 113);
     }

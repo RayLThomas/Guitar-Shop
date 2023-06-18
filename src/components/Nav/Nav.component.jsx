@@ -3,6 +3,7 @@ import '../ButtonCustom/button-custom.component';
 import CartIcon from '../cart-icon/cart-icon.component';
 import CartDropdown from '../cart-dropdown/cart-dropdown.component';
 import { signOutUser } from '../../utils/firebase/firebase.utils';
+import { signInWithGooglePopup, createUserDocumentFromAuth } from "../../utils/firebase/firebase.utils"
 import { Link, useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import { UserContext } from '../../contexts/user.context';
@@ -13,6 +14,12 @@ const Nav = () => {
     const navigate = useNavigate();
     const { currentUser } = useContext(UserContext);
     const { isCartOpen } = useContext(CartContext);
+    const { setCurrentUser } = useContext(UserContext);
+    const signInWithGoogle = async () => {
+        const { user } = await signInWithGooglePopup();
+        createUserDocumentFromAuth(user, { displayName: user.displayName });
+        setCurrentUser(user);
+    }
 
     return (
         <nav className="container">
@@ -40,9 +47,11 @@ const Nav = () => {
                     <Link to="/shop/electrics">
                         <li className='py-2 px-3 fs-5'>Electric</li>
                     </Link>
+{/*
                     <Link to="/locations">
                         <li className='py-2 px-3 fs-5'>Locations</li>
                     </Link>
+*/}
                 </ul>
 
                 
@@ -53,7 +62,7 @@ const Nav = () => {
                         </div>
                     ) : (
                         <div className="d-flex text-end justify-content-end">
-                            <button onClick={() => navigate('/login')} type="button" className="btn btn-outline-primary me-2">Login</button>
+                            <button onClick={signInWithGoogle} type="button" className="btn btn-outline-primary me-2">Login</button>
                             <button onClick={() => navigate('/sign-up')} type="button" className="btn btn-primary">Sign up</button>
                             <CartIcon />
                         </div>
