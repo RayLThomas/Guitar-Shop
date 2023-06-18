@@ -11,7 +11,7 @@ const ProductCategoryCard = ({product}) => {
             {featured.length > 0 && (
                 <Fragment>
                     <h3 className='fw-normal'>{product.name}</h3>
-                    <img className="py-2 img-fluid product-image" src={product.image} alt="add the alt tag"></img>
+                    <img className="py-2 img-fluid product-image" src={product.image} alt="add the alt tag" loading="lazy"></img>
                 </Fragment>
             )}
 
