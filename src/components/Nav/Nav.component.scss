@@ -1,4 +1,16 @@
+.navbar-shrink {
+    padding: 5px 0px !important;
+    transition: padding .3s;
+}
+
 nav {
+    background-color: #fff2ed;
+    box-shadow: 1px 0px 9px;
+    
+    #header {
+        transition: padding .3s;
+    }
+
     .logo-link {
         width: 197px;
     }
@@ -6,6 +18,13 @@ nav {
     .logo {
         height: 80px;
         width: 80px;
+        transition: height .3s, width .3s;
+    }
+
+    .shrink-img {
+        height: 45px;
+        width: 45px;
+        transition: height .3s, width .3s;
     }
 
     ul {
@@ -21,9 +40,6 @@ nav {
 
 @media (max-width: 576px) { 
     .logo-link {
-        width: 80px;
-        display: flex;
-        justify-content: center;
-        padding-bottom: 1em;
+        display: none;
     }
 }

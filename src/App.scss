@@ -1,89 +1,96 @@
 html {
   height: 0;
-}
 
-body {
-  background-color: rgb(255 244 223);
-  position: relative;
-  min-height: 100vh;
-}
+  body {
+    background-color: rgb(255 244 223);
+    position: relative;
+    min-height: 100vh;
 
-* {
-  color: rgb(50 50 50);
-}
+    * {
+      color: rgb(50 50 50);
+    }
 
-.nav-link {
-  padding-left: 0 !important;
-}
-
-h1 {
-  font-size: 5.5em;
-  letter-spacing: 0.05em;
-}
-
-ol {
-  list-style-type: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-a:visited {
-  color: initial;
-}
-
-::selection {
-  background: #dbd93a;
-}
-
-.fadeIn {
-  animation-name: fadeIn;
-  animation-duration: 0.5s;
-  animation-timing-function: ease;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
+    img, .banner, .hero {
+      z-index: 1;
+      position: relative;
+    }
+  
+    button, .footer {
+      position: inherit;
+      z-index: 2;
+    }
+  
+    .nav-link {
+      padding-left: 0 !important;
+    }
+  
+    h1 {
+      font-size: 5.5em;
+      letter-spacing: 0.05em;
+    }
+  
+    ol {
+      list-style-type: none;
+    }
+  
+    a {
+      text-decoration: none;
+    }
+  
+    a:visited {
+      color: initial;
+    }
+  
+    ::selection {
+      background: #dbd93a;
+    }
+  
+    .fadeIn {
+      animation-name: fadeIn;
+      animation-duration: 0.5s;
+      animation-timing-function: ease;
+    }
+  
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 100;
+        transform: translateY(0px);
+      }
+    }
+  
+    .nav a:hover {
+      transition: box-shadow 0.18s cubic-bezier(0.36, 0.65, 0.62, 1);
+      box-shadow: inset 0 -4px 0 #960303;
+    }
+  
+    .hero a {
+      text-decoration: none;
+      border-bottom: 3px solid #960303;
+      box-shadow: inset 0 -4px 0 #960303;
+      color: inherit;
+      transition: background 0.15s cubic-bezier(0.36, 0.65, 0.62, 1);
+    }
+  
+    a:hover{
+      color: #87f7ac !important;
+      background: none;
+    }
+  
+    .paperOverlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-repeat: repeat;
+      background-image: url("./assets//white-concrete-wall.jpg");
+      mix-blend-mode: multiply;
+      pointer-events: none;
+      opacity: .4;
+    }
   }
-  100% {
-    opacity: 100;
-    transform: translateY(0px);
-  }
-}
-
-/* -----------------------
-HOME
---------------------------*/
-.nav a:hover {
-  transition: box-shadow 0.18s cubic-bezier(0.36, 0.65, 0.62, 1);
-  box-shadow: inset 0 -4px 0 #960303;
-}
-
-.hero a {
-  text-decoration: none;
-  border-bottom: 3px solid #960303;
-  box-shadow: inset 0 -4px 0 #960303;
-  color: inherit;
-  transition: background 0.15s cubic-bezier(0.36, 0.65, 0.62, 1);
-}
-
-a:hover{
-  color: #87f7ac !important;
-  background: none;
-}
-
-.paperOverlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-repeat: repeat;
-  background-image: url("./assets//white-concrete-wall.jpg");
-  mix-blend-mode: multiply;
-  pointer-events: none;
-  opacity: .4;
 }

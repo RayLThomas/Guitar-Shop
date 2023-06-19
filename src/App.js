@@ -7,6 +7,7 @@ import Checkout from './routes/checkout/checkout.component'
 import Login from './routes/login/login.component';
 import SignUp from './routes/sign-up/sign-up.component';
 import AllProducts from './routes/all-products/all-products.component';
+import ProductDetailPage from './routes/product-detail-page/product-detail-page.component.jsx'
 
 import './App.scss';
 
@@ -21,6 +22,7 @@ function App() {
       <Route path='/locations' element={<Locations />}/>
       <Route path='/checkout' element={<Checkout />} />
       <Route path='/shop' element={<AllProducts />} />
+      <Route path="/product/:id" element={<ProductDetailPage />} />
       <Route path='/login' element={<Login />}/>
       <Route path='/sign-up' element={<SignUp />}/>
     </Routes>
