@@ -16,9 +16,13 @@
       .header-block {
         text-transform: capitalize;
         width: 23%;
+
+        &:first-child {
+          width: 20%;
+        }
   
         &:last-child {
-          width: 8%;
+          width: 4%;
         }
       }
     }
@@ -29,3 +33,9 @@
       font-size: 36px;
     }
   }
+
+  @media (max-width: 576px) { 
+    .checkout-container {
+      width: 90%;
+    }
+}
