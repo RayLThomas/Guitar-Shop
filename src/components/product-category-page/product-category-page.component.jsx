@@ -1,8 +1,7 @@
-
-
 import { useContext } from "react";
 import { ProductContext } from "../../contexts/product.context";
 import ProductCard from '../../components/product-card/product-card.component';
+import './product-category-page.styles.scss'
 
 const ProductCategoryPage = ({ category }) => {
     const productContext = useContext(ProductContext);

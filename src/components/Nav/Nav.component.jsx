@@ -5,7 +5,7 @@ import CartDropdown from '../cart-dropdown/cart-dropdown.component';
 import { signOutUser } from '../../utils/firebase/firebase.utils';
 import { signInWithGooglePopup, createUserDocumentFromAuth } from "../../utils/firebase/firebase.utils"
 import { Link, useNavigate } from 'react-router-dom';
-import { useContext } from 'react';
+import { useContext, useState, useEffect, useCallback } from 'react';
 import { UserContext } from '../../contexts/user.context';
 import { CartContext } from '../../contexts/cart.context';
 import Logo from '../../assets/Logo.png';
@@ -21,6 +21,25 @@ const Nav = () => {
         setCurrentUser(user);
     }
 
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    const checkScrollTop = useCallback(() => {
+        if (!isScrolled && window.pageYOffset > 125) {
+            setIsScrolled(true);
+        } else if (isScrolled && window.pageYOffset <= 125) {
+            setIsScrolled(false);
+        }
+    }, [isScrolled, setIsScrolled]);
+
+    useEffect(() => {
+        window.addEventListener('scroll', checkScrollTop)
+    }, [checkScrollTop]);
+
+    // makes page scroll to top if Nav is present
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
+
     return (
         <nav className="nav-container container-fluid sticky-top">
             <div className='row col-12 m-0 p-0'>
@@ -32,9 +51,9 @@ const Nav = () => {
                     )
                 }
             </div>
-            <header className="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom border-success">
+            <header id='header' className={`d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 ${isScrolled ? 'navbar-shrink' : ''}`}>
                 <a className='logo-link' href='/'>
-                    <img className="img-fluid logo" src={Logo} alt="logo" />
+                    <img className={`img-fluid logo ${isScrolled ? 'shrink-img' : ''}`} src={Logo} alt="logo" />
                 </a>
 
                 <ul className="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">

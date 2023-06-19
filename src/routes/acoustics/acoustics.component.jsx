@@ -1,16 +1,14 @@
 import Nav from "../../components/Nav/Nav.component";
 import { Fragment } from "react";
-import '../acoustics/acoustics.scss';
 import ProductCategoryPage from '../../components/product-category-page/product-category-page.component'
+import PageBanner from "../../components/page-banner/page-banner.component";
+import AcousticBanner from '../../assets/acoustic-banner.jpg';
 
 const Acoustics = () => {
-
-
-
   return (
     <Fragment>
       <Nav />
-      <h1 className="pb-3 text-center">Acoustic Guitars</h1>
+      <PageBanner bannerText="Acoustic Guitars" bannerImg={AcousticBanner}/> 
       <ProductCategoryPage category='acousticGuitars'/>
     </Fragment>
   );

@@ -5,7 +5,7 @@ const Hero = () => {
     const navigate = useNavigate();
 
     return (
-        <div className="hero fadeIn d-flex flex-column p-4 justify-content-end">
+        <div className="hero fadeIn d-flex flex-column p-4 mt-4 justify-content-end">
             <h1 className="order-2">Find your tone.</h1>
             <div className="heroContent order-3">
                 <p className="fs-3">

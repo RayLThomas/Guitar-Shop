@@ -1,6 +1,5 @@
-.hero {
-    height: 500px;
-    background: url('../../assets/guitar-hero.jpg');
+.banner {
+    height: 800px;
     background-position: left;
     background-size: cover;
     
@@ -10,9 +9,13 @@
     }
 }
 
-
 @media (max-width: 576px) { 
-    .hero h1 {
-        font-size: 4em;
+    .banner {
+        height: 80vh;
+
+        h1 {
+            font-size: 4em;
+        }
     }
+    
 }
