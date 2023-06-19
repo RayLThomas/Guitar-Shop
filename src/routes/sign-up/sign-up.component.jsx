@@ -7,6 +7,7 @@ import ButtonCustom from "../../components/ButtonCustom/button-custom.component"
 import { createUserDocumentFromAuth } from "../../utils/firebase/firebase.utils";
 import { UserContext } from '../../contexts/user.context';
 import { useNavigate } from "react-router-dom";
+import './sign-up.styles.scss';
 
 const  defaultFormFields = {
     displayName: '',
