@@ -1,0 +1,19 @@
+.site-footer {
+    padding: 2.5rem 0;
+    text-align: center;
+    background-color: #a52100;
+    border-top: 0.05rem solid #631603;
+
+    p, a {
+        color: #eeeaea !important;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+
+    a:hover {
+        color: rgb(244, 174, 113) !important;
+        transition: color .3s;
+    }
+}
