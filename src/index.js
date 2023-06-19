@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import './custom.scss';
 import App from './App';
+import Footer from './components/footer/footer.component';
 
 import { UserProvider } from './contexts/user.context';
 import { ProductProvider } from './contexts/product.context';
@@ -21,6 +22,7 @@ root.render(
           <CartProvider>
             <App />
             <div className="paperOverlay"></div>
+            <Footer />
           </CartProvider>
         </UserProvider>
       </ProductProvider>
