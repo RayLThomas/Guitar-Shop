@@ -4,6 +4,7 @@ import { CartContext } from '../../contexts/cart.context';
 import CheckoutItem from '../../components/checkout-item/checkout-item.component';
 import Nav from '../../components/Nav/Nav.component';
 import './checkout.scss';
+import PaymentForm from '../../components/payment-form/payment-form.component';
 
 const Checkout = () => {
   const { cartItems, cartTotal } = useContext(CartContext);
@@ -34,6 +35,7 @@ const Checkout = () => {
         ))}
         <div className='total'>TOTAL: ${cartTotal}</div>
       </div>
+      <PaymentForm />
     </Fragment>
   );
 };
