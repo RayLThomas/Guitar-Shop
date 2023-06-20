@@ -1,5 +1,6 @@
 .hero {
     height: 500px;
+    min-width: fit-content;
     background: url('../../assets/guitar-hero.jpg');
     background-position: left;
     background-size: cover;
@@ -12,7 +13,11 @@
 
 
 @media (max-width: 576px) { 
-    .hero h1 {
-        font-size: 4em;
+    .hero {
+        height: fit-content;
+        
+        h1 {
+            font-size: 4em;
+        }
     }
 }
