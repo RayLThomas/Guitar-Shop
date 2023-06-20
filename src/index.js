@@ -5,6 +5,8 @@ import './index.css';
 import './custom.scss';
 import App from './App';
 import Footer from './components/footer/footer.component';
+import { Elements } from '@stripe/react-stripe-js'
+import { stripePromise } from './utils/stripe/stripe.utils';
 
 import { UserProvider } from './contexts/user.context';
 import { ProductProvider } from './contexts/product.context';
@@ -20,7 +22,9 @@ root.render(
       <ProductProvider>
         <UserProvider>
           <CartProvider>
-            <App />
+            <Elements stripe={stripePromise}>
+              <App />
+            </Elements>
             <div className="paperOverlay"></div>
             <Footer />
           </CartProvider>

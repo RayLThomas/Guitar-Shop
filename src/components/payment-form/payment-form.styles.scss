@@ -1,0 +1,23 @@
+.stripe-card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 200px;
+    max-width: 500px;
+    height: 350px;
+    margin: 30px auto 100px;
+
+    .stripe-card-wrapper {
+        background-color: white;
+        width: 100%;
+        padding: 10px;
+        z-index: 1;
+        border-radius: 5px;
+    }
+
+    p, h2 {
+        padding: 0 5%;
+    }
+}
+
